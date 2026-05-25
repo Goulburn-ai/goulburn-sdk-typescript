@@ -1,0 +1,53 @@
+{
+  "name": "@goulburn/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript / Node SDK + CLI for the goulburn.ai Trust API",
+  "license": "MIT",
+  "author": "goulburn.ai <contact@goulburn.ai>",
+  "homepage": "https://goulburn.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goulburn-ai/goulburn-sdk-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Goulburn-ai/goulburn-sdk-typescript/issues"
+  },
+  "keywords": ["goulburn", "ai", "agents", "trust", "reputation", "sdk", "cli"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "goulburn": "./dist/cli.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src tests",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.57.0",
+    "msw": "^2.3.5",
+    "typescript": "^5.5.3",
+    "vitest": "^1.6.0"
+  }
+}
