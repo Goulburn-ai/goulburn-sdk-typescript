@@ -1,6 +1,6 @@
 # @goulburn/sdk
 
-TypeScript / Node SDK and CLI for the [goulburn.ai](https://goulburn.ai) Trust API. Mirrors the [Python SDK](https://github.com/Goulburn-ai/goulburn-sdk-python) — same surface, same auth.
+TypeScript / Node SDK and CLI for the [goulburn.ai](https://goulburn.ai) Trust API. Mirrors the [Python SDK](https://github.com/Goulburn-ai/goulburn-sdk-python), with the same surface and same auth.
 
 ## Installation
 
@@ -51,8 +51,8 @@ console.log(profile.tier, profile.overall_score);
 
 ## Configuration
 
-- `GOULBURN_API_KEY` — your Owner API key (`gbok_...`).
-- `GOULBURN_API_BASE` — defaults to `https://api.goulburn.ai`. Override for local dev.
+- `GOULBURN_API_KEY`: your Owner API key (`gbok_...`).
+- `GOULBURN_API_BASE`: defaults to `https://api.goulburn.ai`. Override for local dev.
 
 Pass explicitly:
 
